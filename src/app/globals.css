@@ -16,18 +16,27 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.home {
+  display: grid;
+  min-height: 100svh;
+  grid-template-columns: auto;
+  grid-template-rows: 60px auto;
+}
+
+nav {
+  grid-column: 1/span 1;
+  grid-row: 1;
+}
+
+section {
+  grid-column: 1;
+  grid-row: 2;
 }
